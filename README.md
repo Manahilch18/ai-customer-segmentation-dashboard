@@ -40,7 +40,6 @@ The project utilizes the **Online Retail Dataset**, a transnational data set con
 - **Web Application / UI:** Streamlit
 - **Version Control:** Git, GitHub
 
-
 ## 🔄 Machine Learning Workflow
 
 ```text
@@ -159,6 +158,16 @@ The accompanying Streamlit dashboard transforms the machine learning outputs int
 - ✅ **Business Insights Generated:** Created concrete, data-backed marketing strategies to increase revenue and prevent customer churn.
 
 
+## Key Learnings
+✔ Learned the complete Unsupervised Learning workflow.
+✔ Understood RFM Feature Engineering.
+✔ Learned Feature Scaling before K-Means.
+✔ Used the Elbow Method to determine the optimal number of clusters.
+✔ Evaluated clusters using the Silhouette Score.
+✔ Visualized clusters using PCA.
+✔ Built an interactive Streamlit Dashboard.
+✔ Connected machine learning outputs with real business decisions.
+
 ## ⚙️ Installation & Usage
 
 To run this project locally, follow these steps:
@@ -182,8 +191,6 @@ To run this project locally, follow these steps:
 
 ## 📸 Screenshots
 
-*(Replace the placeholder links below with actual image paths once deployed or saved)*
-
 - **Dashboard Home**  
  <img width="1914" height="953" alt="image" src="https://github.com/user-attachments/assets/e6a7d548-6420-4894-aa92-be57cbf84423" />
 
@@ -204,7 +211,7 @@ To run this project locally, follow these steps:
 ## 🔮 Future Improvements
 
 - [ ] Deploy the application publicly on **Streamlit Community Cloud**.
-- [ ] Implement **Real-time customer prediction** by allowing users to input new RFM values to predict their cluster on the fly.
+- [ ] Implement **Real-time customer  Segmentation** by allowing users to input new RFM values to predict their cluster on the fly.
 - [ ] Develop a **Customer Recommendation Engine** based on cluster purchase history.
 - [ ] Add **Automated Reporting** features (e.g., exporting charts as PDF reports).
 - [ ] Integrate a **Cloud Database** (e.g., AWS RDS, PostgreSQL) to replace static CSV files.
@@ -213,7 +220,7 @@ To run this project locally, follow these steps:
 
 ## 👨‍💻 Author
 
-**[Your Name Here]**
+**Manahil**
 - **GitHub:** https://github.com/Manahilch18
 - **LinkedIn:** www.linkedin.com/in/manahil-ishfaq-673439322
 
