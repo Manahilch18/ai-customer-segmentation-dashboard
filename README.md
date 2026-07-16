@@ -15,7 +15,7 @@
 
 ## 📖 Project Overview
 
-This project applies **Unsupervised Machine Learning** to segment retail customers based on their purchasing behavior using **RFM (Recency, Frequency, Monetary)** analysis and the **K-Means Clustering** algorithm. 
+This project applies multiple Unsupervised Machine Learning algorithms for customer segmentation using RFM (Recency, Frequency, Monetary) analysis. K-Means is used as the primary deployment model, while Hierarchical Clustering (Ward) and DBSCAN are implemented for comparative analysis to evaluate different clustering approaches.
 
 The project encompasses a complete data science workflow, starting from raw data preprocessing and exploratory data analysis (EDA), through to feature engineering, K-Means clustering, and culminates in a production-ready, interactive **Streamlit Dashboard** for business stakeholders.
 
@@ -57,6 +57,12 @@ Feature Scaling
      ↓
 K-Means Clustering
      ↓
+Hierarchical Clustering
+      ↓
+DBSCAN
+      ↓
+Model Comparison
+     ↓
 Model Evaluation
      ↓
 Customer Segmentation
@@ -93,6 +99,9 @@ AI_Customer_Segmentation/
 │   ├── 04_RFM_Feature_Engineering.ipynb
 │   ├── 05_KMeans_Model.ipynb
 │   └── 06_Model_Evaluation.ipynb
+│   └── 07_Hierarchical_Clustering.ipynb
+│   └── 08_DBSCAN.ipynb
+│   └── 09_Model_Comparison.ipynb
 │
 └── pages/                      # Streamlit multipage application files
     ├── 1_Dataset.py
@@ -112,6 +121,21 @@ The data science lifecycle is broken down into structured Jupyter Notebooks:
 4. **`04_RFM_Feature_Engineering.ipynb`**: Transforming transactional data into customer-level RFM metrics (Recency, Frequency, Monetary).
 5. **`05_KMeans_Model.ipynb`**: Scaling the RFM features, finding the optimal number of clusters using the Elbow Method, and training the final K-Means model.
 6. **`06_Model_Evaluation.ipynb`**: Evaluating cluster quality using Silhouette Scores and profiling the final customer segments.
+7. **`07_Hierarchical_Clustering.ipynb`**
+-  Applied Agglomerative Hierarchical Clustering using Ward Linkage.
+- Evaluated cluster quality using Silhouette Score.
+- Visualized clusters using PCA and Dendrogram.
+
+8. **`08_DBSCAN.ipynb`**
+- Applied Density-Based Spatial Clustering (DBSCAN).
+- Tuned eps and min_samples.
+- Identified noise points and analyzed density-based customer groups.
+- Compared DBSCAN results with centroid- and distance-based methods.
+9. **09_Model_Comparison.ipynb**
+Compared K-Means, Hierarchical Clustering, and DBSCAN.
+- Evaluated clustering quality using multiple metrics.
+- Compared scalability, interpretability, and business usefulness.
+- Selected the most appropriate deployment model.
 
 
 ## 🧠 Machine Learning Details
@@ -124,6 +148,15 @@ The data science lifecycle is broken down into structured Jupyter Notebooks:
 | **Evaluation Metrics** | Elbow Method, Silhouette Score |
 | **Best K (Clusters)** | 3 |
 | **Silhouette Score** | 0.5097 |
+
+## campare with other 
+
+| Algorithm    | Result                 |
+| ------------ | ---------------------- |
+| K-Means      | Best K = 3             |
+| Hierarchical | Ward Linkage           |
+| DBSCAN       | eps=0.6, min_samples=8 |
+
 
 
 ## 🎯 Customer Segments
@@ -147,6 +180,7 @@ The accompanying Streamlit dashboard transforms the machine learning outputs int
 - **Segment Analysis:** Interactive Plotly pie and bar charts detailing customer count, revenue distribution, and average RFM metrics by segment.
 - **PCA Visualization:** Stunning 3D and 2D Principal Component Analysis (PCA) scatter plots to visualize the mathematical separation of the clusters.
 - **Business Insights:** Actionable marketing and retention strategies tailored to VIP, Regular, and At-Risk customers.
+- Model comparison summary showing why K-Means was selected for deployment.
 
 
 
@@ -156,7 +190,7 @@ The accompanying Streamlit dashboard transforms the machine learning outputs int
 - ✅ **Customer-Level RFM Analysis:** Mapped complex transactional data into highly interpretable Recency, Frequency, and Monetary scores.
 - ✅ **Interactive Dashboard:** Built a professional, ATS-friendly web application serving as a bridge between data science and business strategy.
 - ✅ **Business Insights Generated:** Created concrete, data-backed marketing strategies to increase revenue and prevent customer churn.
-
+- Although DBSCAN achieved the highest Silhouette Score (0.6874), it produced only two customer clusters and several noise points. Therefore, K-Means was selected as the deployment model due to its balanced segmentation, scalability, and business applicability.
 
 ## Key Learnings
 ✔ Learned the complete Unsupervised Learning workflow.
@@ -167,6 +201,11 @@ The accompanying Streamlit dashboard transforms the machine learning outputs int
 ✔ Visualized clusters using PCA.
 ✔ Built an interactive Streamlit Dashboard.
 ✔ Connected machine learning outputs with real business decisions.
+✔ Explored Hierarchical Clustering using Ward Linkage.
+✔ Applied DBSCAN for density-based clustering and outlier detection.
+✔ Compared multiple clustering algorithms.
+✔ Learned that a higher evaluation metric does not always indicate a better business solution.
+
 
 ## ⚙️ Installation & Usage
 
