@@ -42,32 +42,28 @@ The project utilizes the **Online Retail Dataset**, a transnational data set con
 
 ## 🔄 Machine Learning Workflow
 
+
+
 ```text
-Raw Dataset
-     ↓
-Data Understanding
-     ↓
-Data Cleaning
-     ↓
-Exploratory Data Analysis (EDA)
-     ↓
-RFM Feature Engineering
-     ↓
-Feature Scaling
-     ↓
-K-Means Clustering
-     ↓
-Hierarchical Clustering
+
+Raw Data
       ↓
-DBSCAN
+Cleaning
       ↓
-Model Comparison
-     ↓
-Model Evaluation
-     ↓
-Customer Segmentation
-     ↓
-Interactive Dashboard
+EDA
+      ↓
+RFM
+      ↓
+Scaling
+      ↓
+      ├────────── KMeans
+      ├────────── Hierarchical
+      └────────── DBSCAN
+               ↓
+      Model Comparison
+               ↓
+Final Deployment Model (KMeans)
+
 ```
 
 
@@ -261,7 +257,7 @@ To run this project locally, follow these steps:
 
 **Manahil**
 - **GitHub:** https://github.com/Manahilch18
-- **LinkedIn:** www.linkedin.com/in/manahil-ishfaq-673439322
+- **LinkedIn:**  https://www.linkedin.com/in/manahil-ishfaq-673439322
 
 
 ## 📜 License
